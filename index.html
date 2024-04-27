@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de nom de salon de coiffure</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0e4d7;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #6a5acd;
+        }
+
+        button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 5px #d38370;
+        }
+
+        button:hover {
+            background-color: #ee5c42;
+        }
+
+        p {
+            font-size: 24px;
+            color: #555;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Générateur de nom de salon de coiffure</h1>
+    <button onclick="genererNom()">Générer un nom</button>
+    <p id="nomSalon">Appuyez sur le bouton pour générer un nom...</p>
+    <script>
+        // JavaScript pour générer le nom
+        document.addEventListener('DOMContentLoaded', function() {
+            function genererNom() {
+                const elements = [
+                    "Hitl'hair",
+                    "Nique ta m'hair",
+                    "Participa'tiff",
+                    "Défris'tiff",
+                    "Révolu'tiff",
+                    "Capil'l'hair",
+                    "Explora'tiff",
+                    "Evanou'hair",
+                    "Mani'pultiff",
+                    "Styla'tiff"
+                ];
+                const index = Math.floor(Math.random() * elements.length);
+                document.getElementById('nomSalon').innerText = elements[index];
+            }
+
+            window.genererNom = genererNom; // Expose la fonction au scope global
+        });
+    </script>
+</body>
+</html>
