@@ -3,68 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Générateur de nom de salon de coiffure</title>
+    <title>Générateur de noms de salons de coiffure</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0e4d7;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #232f3e;
+            color: #f7f8fa;
             text-align: center;
-            padding: 20px;
+            padding: 40px;
         }
 
         h1 {
-            color: #6a5acd;
+            color: #ff9900;
         }
 
         button {
-            background-color: #ff6347;
-            color: white;
+            background-color: #ff9900;
+            color: #232f3e;
             border: none;
-            padding: 15px 30px;
-            font-size: 16px;
+            padding: 12px 28px;
+            font-size: 18px;
             cursor: pointer;
-            border-radius: 10px;
-            box-shadow: 0 5px #d38370;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #ee5c42;
+            background-color: #cc7a00;
         }
 
         p {
-            font-size: 24px;
-            color: #555;
-            margin-top: 20px;
+            font-size: 22px;
+            margin-top: 25px;
         }
     </style>
 </head>
 <body>
-    <h1>Générateur de nom de salon de coiffure</h1>
+    <h1>Générateur de noms de salons de coiffure</h1>
     <button onclick="genererNom()">Générer un nom</button>
-    <p id="nomSalon">Appuyez sur le bouton pour générer un nom...</p>
+    <p id="nomSalon">Cliquez sur le bouton pour générer un nom...</p>
     <script>
-        // JavaScript pour générer le nom
-        document.addEventListener('DOMContentLoaded', function() {
-            function genererNom() {
-                const elements = [
-                    "Hitl'hair",
-                    "Nique ta m'hair",
-                    "Participa'tiff",
-                    "Défris'tiff",
-                    "Révolu'tiff",
-                    "Capil'l'hair",
-                    "Explora'tiff",
-                    "Evanou'hair",
-                    "Mani'pultiff",
-                    "Styla'tiff"
-                ];
-                const index = Math.floor(Math.random() * elements.length);
-                document.getElementById('nomSalon').innerText = elements[index];
-            }
+        const nomsDeSalons = [
+            "L’atelier Crea’tif",
+            "Nouvel’hair",
+            "Nat’tif",
+            "Imagin’hair",
+            "Tete En L’hair",
+            "F’hair D Nath",
+            "Fmhair",
+            "D’hair Et D’o",
+            "L’hair Du Paraitre",
+            "Coloc At Hair",
+            "L’envie D’hair",
+            "Nouvel’hair",
+            "Evolutif’s",
+            "Posi Tiff Coiffure",
+            "L’hair Du Temps",
+            "L’art De Pl’hair",
+            "Sur Un Hair De Make Up",
+            "Nouvelle Hair",
+            "Cap Tif’",
+            "Laf Hair",
+            "Jennif Hair",
+            "Imagin’hair",
+            "Au Long Court",
+            "Nouvel’hair Coiffure",
+            "Estu’hair",
+            "So’beautiful Hair",
+            "Nat’tif",
+            "Folie Dans L’hair",
+            "Les Hair De Julie",
+            "Diminu’tifs",
+            "Hair Design",
+            "Crea-tifs",
+            "Epi-tete Coiffure",
+            "L’abeced’hair",
+            "Intui’tif",
+            "L’Envie De Pl Hair",
+            "F’hair D Nath",
+            "Art’hair",
+            "Le Bol D’hair…",
+            "Supp’hair Belle",
+            "Sur Un Hair De Brocante",
+            "Alternatif",
+            "Prendre L’hair Coiffure",
+            "L’Hair Vegetal Du Bassin",
+            "L’hair De Rien",
+            "Tif’fany",
+            "Dans L’hair Du Temps",
+            "Comme Un Hair",
+            "Est’hair Coiffure",
+            "L’univ’hair",
+            "Epi’ Tete Coiffure",
+            "Instinc’tif",
+            "Un Hair D’amelie",
+            "Evolu’tif",
+            "L’ Hair Du Temps",
+            "Hair De Famille",
+            "Attrac'tiff",
+            "S’coup",
+            "De Meche Avec Sylvie",
+            "Admira’tifs",
+            "A L Haire Libre",
+            "Hair Libr Coiffure",
+            "S’coup International",
+            "A L’hair Libre",
+            "Hair Force",
+            "Cl’ Hair",
+            "Crea'tif",
+            "Intermedi ‘ Hair Coiffure",
+            "Impera’tif",
+            "Barb Hair Shop",
+            "L’atelier Crea Tif",
+            "Les Secrets Pour Pl’ Hair",
+            "Hair Pur",
+            "Partouta’tif",
+            "Ac’tif",
+            "Nique ta m'hair",
+            "Minist'hair",
+            "Atmosp’hair",
+            "Scoothair",
+            "Love In The Hair",
+            "Art De Pl’hair",
+            "Hair France",
+            "Changer D’hair",
+            "Imag’in’hair",
+            "Hair Du Temps",
+            "Participa'tiff",
+            "N’hair J Pro",
+            "Driv’hair",
+            "Winhair"
+        ];
 
-            window.genererNom = genererNom; // Expose la fonction au scope global
-        });
+        function genererNom() {
+            const index = Math.floor(Math.random() * nomsDeSalons.length);
+            document.getElementById('nomSalon').innerText = nomsDeSalons[index];
+        }
     </script>
 </body>
 </html>
